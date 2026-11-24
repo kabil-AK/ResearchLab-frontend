@@ -24,7 +24,7 @@ function AdminLogin() {
       const token = response.data.token;
 
       if (!token) {
-        setError("Login response-la token kidaikkala.");
+        setError("Login response- token did not receive .");
         return;
       }
 
@@ -34,7 +34,7 @@ function AdminLogin() {
       console.error("Login error:", error);
       setError(
         error.response?.data?.message ||
-          "Login failed. Email and password check pannunga."
+          "Login failed. Email and password incorrect check."
       );
     } finally {
       setLoading(false);
